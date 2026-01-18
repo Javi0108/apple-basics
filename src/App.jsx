@@ -37,6 +37,9 @@ function App() {
   return (
     <>
       <Loader visible={loading} />
+      <a href="https://www.apple.com/" target="_blank">
+        <img className="img" src="/icons/appleLogo.svg" alt="Apple Logo" />
+      </a>
       <div className="buttons">
         <button
           className="beforeButton"

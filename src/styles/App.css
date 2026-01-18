@@ -1,3 +1,12 @@
+.img {
+  position: fixed;
+  top: 5dvh;
+  left: 7dvw;
+  transform: translateX(-15%);
+  color: white;
+  width: 4%;
+}
+
 .object-title {
   position: fixed;
   left: 50dvw;
@@ -147,4 +156,11 @@
 
 .info {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .img {
+    left: 15dvw;
+    width: 10%;
+  }
 }
