@@ -27,7 +27,7 @@ export default class Resources extends EventEmitter {
 
     this.loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
       const progress = itemsLoaded / itemsTotal;
-      document.querySelector(".progress-text").textContent = `${(
+      document.querySelector(".progress-text").innerHTML = `${(
         progress.toFixed(2) * 100
       ).toFixed(0)}%`;
       this.trigger("progress", progress);
