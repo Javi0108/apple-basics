@@ -1,0 +1,149 @@
+.object-title {
+  position: fixed;
+  left: 50dvw;
+  transform: translateX(-50%);
+  top: 10dvh;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.colors {
+  position: fixed;
+  left: 50dvw;
+  transform: translateX(-50%);
+  bottom: 15dvh;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.circle-picker {
+  padding: 0.5rem;
+  margin: 0 !important;
+  border-radius: 50px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+
+  div {
+    margin: 0 !important;
+  }
+}
+
+.circle-picker::after {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.buttons {
+  position: fixed;
+  width: 100%;
+  bottom: 7dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.beforeButton,
+.nextButton {
+  font-size: 1rem;
+  position: relative;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.beforeButton::after,
+.nextButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  backdrop-filter: blur(1px);
+  box-shadow:
+    inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.beforeButton:hover,
+.nextButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dot1,
+.dot2,
+.dot3,
+.dot4 {
+  position: relative;
+  padding: 0.3rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dot1::after,
+.dot2::after,
+.dot3::after,
+.dot4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow:
+    inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.info {
+  display: none;
+}

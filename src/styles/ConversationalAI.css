@@ -1,0 +1,56 @@
+.IA-Conversation {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem 0.2rem 0.6rem;
+  border: 0px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.IA-Conversation::after {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.IA-Conversation:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stop-button {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  padding: 0.3rem 0.6rem 0.2rem 0.6rem;
+  border-radius: 30px;
+  border: 0px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Onest", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .IA-Conversation {
+    left: 75dvw;
+    bottom: 15dvh;
+  }
+
+  .stop-button {
+    left: 75dvw;
+    bottom: 15dvh;
+  }
+}
