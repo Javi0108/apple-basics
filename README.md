@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# Apple 3D Showcase + AI Audio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Apple 3D Showcase** es una aplicación web interactiva desarrollada con **React.js** y **Three.js**, que permite explorar productos de Apple en un entorno 3D. Además, incorpora **inteligencia artificial de audio** mediante **ElevenLabs** y el modelo **LLM Gemini 2.5 Flash**, ofreciendo descripciones habladas y explicaciones detalladas sobre cada producto.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Visualización 3D de productos Apple**: iPhone, Watch, AirPods, Vision Pro y más.
+- 🔄 **Rotación y zoom interactivo**: Examina los productos desde cualquier ángulo.
+- 🗣 **IA de audio integrada**: Escucha información detallada sobre cada producto usando ElevenLabs y Gemini 2.5 Flash.
+- 🚀 **Animaciones suaves**: Movimiento de cámara y transiciones realistas.
+- 📦 **Carga dinámica de modelos GLTF**: Optimiza el rendimiento cargando solo los objetos necesarios.
+- ⚡ **Estructura modular**: Componentes separados para cada producto y control total sobre la escena 3D.
+- 🛠 **React + Three.js + IA**: Combina experiencia visual y auditiva en tiempo real.
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React.js** – Biblioteca de interfaz de usuario.
+- **Three.js** – Motor de gráficos 3D.
+- **GLTF / GLB** – Formato de modelos 3D optimizado para la web.
+- **ElevenLabs AI** – Síntesis de voz avanzada.
+- **Gemini 2.5 Flash** – Modelo LLM para generar información contextual sobre productos.
+- **ES6 Modules** – Código moderno y modular.
+- **CSS / Sass** – Estilos responsivos y modernos.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Estructura del Proyecto
