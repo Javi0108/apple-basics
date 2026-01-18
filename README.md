@@ -1,23 +1,23 @@
 # Apple 3D Showcase + AI Audio
 
-**Apple 3D Showcase** es una aplicación web interactiva desarrollada con **React.js** y **Three.js**, que permite explorar productos de Apple en un entorno 3D. Además, incorpora **inteligencia artificial de audio** mediante **ElevenLabs** y el modelo **LLM Gemini 2.5 Flash**, ofreciendo descripciones habladas y explicaciones detalladas sobre cada producto.
+**Apple 3D Showcase** is an interactive web application built with **React.js** and **Three.js**, allowing users to explore Apple products in a 3D environment. Additionally, it integrates **AI audio** using **ElevenLabs** and the **Gemini 2.5 Flash** LLM, providing spoken descriptions and detailed information about each product.
 
-## Características
+## Features
 
-- 🎨 **Visualización 3D de productos Apple**: iPhone, Watch, AirPods, Vision Pro y más.
-- 🔄 **Rotación y zoom interactivo**: Examina los productos desde cualquier ángulo.
-- 🗣 **IA de audio integrada**: Escucha información detallada sobre cada producto usando ElevenLabs y Gemini 2.5 Flash.
-- 🚀 **Animaciones suaves**: Movimiento de cámara y transiciones realistas.
-- 📦 **Carga dinámica de modelos GLTF**: Optimiza el rendimiento cargando solo los objetos necesarios.
-- ⚡ **Estructura modular**: Componentes separados para cada producto y control total sobre la escena 3D.
-- 🛠 **React + Three.js + IA**: Combina experiencia visual y auditiva en tiempo real.
+- 🎨 **3D Visualization of Apple Products**: iPhone, Watch, AirPods, Vision Pro, and more.
+- 🔄 **Interactive Rotation and Zoom**: Examine products from any angle.
+- 🗣 **Integrated AI Audio**: Listen to detailed product information using ElevenLabs and Gemini 2.5 Flash.
+- 🚀 **Smooth Animations**: Realistic camera movement and transitions.
+- 📦 **Dynamic GLTF Model Loading**: Optimizes performance by loading only necessary objects.
+- ⚡ **Modular Structure**: Separate components for each product with full control over the 3D scene.
+- 🛠 **React + Three.js + AI**: Combines visual and auditory experiences in real-time.
 
-## Tecnologías
+## Technologies
 
-- **React.js** – Biblioteca de interfaz de usuario.
-- **Three.js** – Motor de gráficos 3D.
-- **GLTF / GLB** – Formato de modelos 3D optimizado para la web.
-- **ElevenLabs AI** – Síntesis de voz avanzada.
-- **Gemini 2.5 Flash** – Modelo LLM para generar información contextual sobre productos.
-- **ES6 Modules** – Código moderno y modular.
-- **CSS / Sass** – Estilos responsivos y modernos.
+- **React.js** – User interface library.
+- **Three.js** – 3D graphics engine.
+- **GLTF / GLB** – Web-optimized 3D model format.
+- **ElevenLabs AI** – Advanced voice synthesis.
+- **Gemini 2.5 Flash** – LLM for generating contextual product information.
+- **ES6 Modules** – Modern, modular code.
+- **CSS / Sass** – Responsive and modern styling.
