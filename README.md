@@ -21,5 +21,3 @@
 - **Gemini 2.5 Flash** – Modelo LLM para generar información contextual sobre productos.
 - **ES6 Modules** – Código moderno y modular.
 - **CSS / Sass** – Estilos responsivos y modernos.
-
-## Estructura del Proyecto
