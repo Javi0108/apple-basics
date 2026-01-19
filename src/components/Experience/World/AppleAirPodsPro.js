@@ -21,12 +21,9 @@ export default class AppleAirPodsPro {
   }
 
   setObject() {
-    // Posición, rotación y escala
     this.AppleAirPodsPro.position.set(0, -0.25, 4);
-    this.AppleAirPodsPro.rotation.set(0, Math.PI, 0);
     this.AppleAirPodsPro.scale.set(15, 15, 15);
 
-    // Materiales
     this.AppleAirPodsPro.traverse((child) => {
       if (child.isMesh) {
         const mat = child.material;

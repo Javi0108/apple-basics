@@ -9,7 +9,7 @@ export default class ObjectControls {
     this.isDragging = false;
     this.prev = { x: 0, y: 0 };
 
-    this.rotationSpeed = 0.005;
+    this.rotationSpeed = 0.002;
     this.minX = -Math.PI / 2;
     this.maxX = Math.PI / 2;
 
@@ -52,7 +52,7 @@ export default class ObjectControls {
     this.isDragging = false;
     const vel = this.velocityX || 0;
     gsap.to(this.object.rotation, {
-      y: this.object.rotation.y + vel * 0.5,
+      y: this.object.rotation.y + vel * 0.25,
       duration: 0.6,
       ease: "power3.out",
     });

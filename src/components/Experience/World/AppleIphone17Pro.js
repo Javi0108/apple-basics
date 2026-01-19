@@ -19,7 +19,6 @@ export default class AppleIphone17Pro {
 
   setObject() {
     this.AppleIphone17Pro.position.set(2, 0, 2);
-    this.AppleIphone17Pro.rotation.set(0, Math.PI * 0.5, 0);
     this.AppleIphone17Pro.scale.set(15, 15, 15);
 
     this.AppleIphone17Pro.traverse((child) => {
