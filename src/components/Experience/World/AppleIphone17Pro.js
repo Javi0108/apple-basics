@@ -11,7 +11,7 @@ export default class AppleIphone17Pro {
       this.experience.resources.items.AppleIphone17Pro.scene;
     this.controls = new ObjectControls(
       this.AppleIphone17Pro,
-      this.experience.canvas
+      this.experience.canvas,
     );
     this.setObject();
     this.setListeners();

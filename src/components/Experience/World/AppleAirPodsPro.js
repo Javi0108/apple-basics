@@ -11,10 +11,10 @@ export default class AppleAirPodsPro {
     this.AppleAirPodsPro =
       this.experience.resources.items.AppleAirPodsPro?.scene || null;
     this.mixer = null;
-    // this.controls = new ObjectControls(
-    //   this.AppleAirPodsPro,
-    //   this.experience.canvas
-    // );
+    this.controls = new ObjectControls(
+      this.AppleAirPodsPro,
+      this.experience.canvas,
+    );
     if (this.AppleAirPodsPro) {
       this.setObject();
     }
@@ -22,9 +22,9 @@ export default class AppleAirPodsPro {
 
   setObject() {
     // Posición, rotación y escala
-    this.AppleAirPodsPro.position.set(0.3, -0.25, 4);
+    this.AppleAirPodsPro.position.set(0, -0.25, 4);
     this.AppleAirPodsPro.rotation.set(0, Math.PI, 0);
-    this.AppleAirPodsPro.scale.set(0.2, 0.2, 0.2);
+    this.AppleAirPodsPro.scale.set(15, 15, 15);
 
     // Materiales
     this.AppleAirPodsPro.traverse((child) => {
@@ -41,28 +41,6 @@ export default class AppleAirPodsPro {
     });
 
     this.scene.add(this.AppleAirPodsPro);
-
-    // Configurar animación si existe
-    const clips =
-      this.experience.resources.items.AppleAirPodsPro?.animations || [];
-    if (clips.length > 0) {
-      const clip = clips[0]; // la única animación
-      this.mixer = new THREE.AnimationMixer(this.AppleAirPodsPro);
-      const action = this.mixer.clipAction(clip);
-
-      action.play();
-
-      // Detener automáticamente a la mitad
-      const mitad = clip.duration / 2;
-      action.time = 0; // empezar desde el inicio
-      action.paused = false;
-
-      // Usamos un setTimeout proporcional a la duración para pausar
-      setTimeout(() => {
-        action.paused = true;
-        action.time = mitad; // asegurarse de quedarse justo en la mitad
-      }, mitad * 1000); // convertir segundos a milisegundos
-    }
   }
 
   destroy(onComplete) {

@@ -40,7 +40,7 @@ export default class ObjectControls {
     this.object.rotation.x = THREE.MathUtils.clamp(
       this.object.rotation.x,
       this.minX,
-      this.maxX
+      this.maxX,
     );
     this.velocityX = dx;
 

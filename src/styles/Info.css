@@ -44,13 +44,21 @@
   color: white;
   transition: all 0.3s ease;
   animation: easeIn 0.5s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   z-index: 10;
 }
 
 .info-title {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 20px;
+  padding: 1rem;
 
   button {
     background: transparent;
@@ -123,6 +131,7 @@
   .info-container {
     width: 100dvw;
     height: 100dvh;
+
     left: 0;
     top: 0;
     border-radius: 0;
