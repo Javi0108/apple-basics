@@ -22,7 +22,7 @@ export default [
   {
     name: "Environment",
     type: "environment",
-    path: "/environment/autumn_field_puresky_1k.hdr",
+    path: "/environment/studio_small_08_1k.hdr",
   },
   {
     name: "PerlinTexture",

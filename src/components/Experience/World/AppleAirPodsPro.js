@@ -9,15 +9,13 @@ export default class AppleAirPodsPro {
     this.scene = this.experience.scene;
     this.time = this.experience.time;
     this.AppleAirPodsPro =
-      this.experience.resources.items.AppleAirPodsPro?.scene || null;
+      this.experience.resources.items.AppleAirPodsPro.scene;
     this.mixer = null;
     this.controls = new ObjectControls(
       this.AppleAirPodsPro,
       this.experience.canvas,
     );
-    if (this.AppleAirPodsPro) {
-      this.setObject();
-    }
+    this.setObject();
   }
 
   setObject() {

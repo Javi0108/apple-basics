@@ -15,7 +15,6 @@ export default class World extends EventEmitter {
     this.scene = this.experience.scene;
     this.camera = this.experience.camera;
     this.resources = this.experience.resources;
-    //this.loadingSquare = new LoadingSquare();
     this.objects = [
       AppleWatchUltra,
       AppleIphone17Pro,
@@ -87,6 +86,8 @@ export default class World extends EventEmitter {
   }
 
   loadCurrentObject() {
+    console.log(this.currentObject);
+    if (this.currentObject) this.currentObject.destroy();
     const ItemClass = this.objects[this.currentIndex];
     const newObject = new ItemClass();
     this.currentObject = newObject; // opcional si quieres guardar referencia
@@ -97,11 +98,13 @@ export default class World extends EventEmitter {
   }
 
   nextObject() {
+    console.log("nextObject");
     this.currentIndex = (this.currentIndex + 1) % this.objects.length;
     this.loadCurrentObject();
   }
 
   prevObject() {
+    console.log("prevObject");
     this.currentIndex =
       (this.currentIndex - 1 + this.objects.length) % this.objects.length;
     this.loadCurrentObject();

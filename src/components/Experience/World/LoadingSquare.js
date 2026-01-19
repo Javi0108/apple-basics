@@ -1,3 +1,7 @@
+import Experience from "../Experience.js";
+import * as THREE from "three";
+import gsap from "gsap";
+
 export default class LoadingSquare {
   constructor() {
     this.experience = Experience.instance; // 👈 MUY IMPORTANTE

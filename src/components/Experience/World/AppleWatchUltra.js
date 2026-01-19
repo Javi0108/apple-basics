@@ -11,7 +11,7 @@ export default class AppleWatchUltra {
       this.experience.resources.items.AppleWatchUltra.scene;
     this.controls = new ObjectControls(
       this.AppleWatchUltra,
-      this.experience.canvas
+      this.experience.canvas,
     );
 
     this.setObject();

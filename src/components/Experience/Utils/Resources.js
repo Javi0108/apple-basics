@@ -21,10 +21,6 @@ export default class Resources extends EventEmitter {
     this.loaders = {};
     this.loadingManager = new THREE.LoadingManager();
 
-    this.loadingManager.onLoad = () => {
-      this.trigger("ready");
-    };
-
     this.loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
       const progress = itemsLoaded / itemsTotal;
       document.querySelector(".progress-text").innerHTML = `${(

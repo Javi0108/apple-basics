@@ -9,10 +9,10 @@ export default class Environment {
     this.resources = this.experience.resources.items.Environment;
     this.renderer = this.experience.renderer.instance;
     this.envMap = null;
-    //this.pointLight = null;
-    //this.setLights();
+    this.pointLight = null;
+    this.setLights();
     this.setEnvironment();
-    //this.setListeners();
+    this.setListeners();
   }
 
   setLights() {
