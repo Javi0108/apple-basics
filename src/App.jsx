@@ -53,7 +53,7 @@ function App() {
             });
           }}
         >
-          <i className="bi bi-caret-left-fill"></i>
+          <i className="bi bi-arrow-left-circle"></i>
         </button>
         <div className="dots">
           <i className="bi bi-dot" id="dot1" style={{ color: "#ffffffff" }}></i>
@@ -72,7 +72,7 @@ function App() {
             });
           }}
         >
-          <i className="bi bi-caret-right-fill"></i>
+          <i className="bi bi-arrow-right-circle"></i>
         </button>
       </div>
 

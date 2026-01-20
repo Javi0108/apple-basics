@@ -12,6 +12,7 @@ export default class AppleIphone17Pro {
     this.controls = new ObjectControls(
       this.AppleIphone17Pro,
       this.experience.canvas,
+      this.experience.camera.instance,
     );
     this.setObject();
     this.setListeners();
@@ -19,7 +20,7 @@ export default class AppleIphone17Pro {
 
   setObject() {
     this.AppleIphone17Pro.position.set(2, 0, 2);
-    this.AppleIphone17Pro.scale.set(15, 15, 15);
+    this.AppleIphone17Pro.scale.set(12, 12, 12);
 
     this.AppleIphone17Pro.traverse((child) => {
       if (child.isMesh && child.material?.isMeshStandardMaterial) {

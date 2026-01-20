@@ -7,7 +7,6 @@ export default class AppleIphone17Pro {
     this.experience = Experience.instance;
     this.scene = this.experience.scene;
     this.resources = this.experience.resources.items.DustTexture;
-
     this.setObject();
     this.setListeners();
   }
@@ -26,7 +25,7 @@ export default class AppleIphone17Pro {
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute(
       "position",
-      new THREE.Float32BufferAttribute(vertices, 3)
+      new THREE.Float32BufferAttribute(vertices, 3),
     );
 
     const material = new THREE.PointsMaterial({

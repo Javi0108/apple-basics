@@ -1,10 +1,10 @@
 import * as THREE from "three";
-import gsap from "gsap";
 
 export default class ObjectControls {
-  constructor(object, domElement) {
+  constructor(object, domElement, camera) {
     this.object = object;
     this.domElement = domElement;
+    this.camera = camera;
 
     this.isDragging = false;
     this.prev = { x: 0, y: 0 };
@@ -13,8 +13,12 @@ export default class ObjectControls {
     this.minX = -Math.PI / 2;
     this.maxX = Math.PI / 2;
 
+    this.pitch = 0;
+
     this._addEvents();
   }
+
+  /* ================= EVENTS ================= */
 
   _addEvents() {
     this.domElement.addEventListener("pointerdown", this._onDown);
@@ -34,15 +38,7 @@ export default class ObjectControls {
     const dx = e.clientX - this.prev.x;
     const dy = e.clientY - this.prev.y;
 
-    this.object.rotation.y += dx * this.rotationSpeed;
-    this.object.rotation.x += dy * this.rotationSpeed;
-
-    this.object.rotation.x = THREE.MathUtils.clamp(
-      this.object.rotation.x,
-      this.minX,
-      this.maxX,
-    );
-    this.velocityX = dx;
+    this._rotate(dx, dy);
 
     this.prev.x = e.clientX;
     this.prev.y = e.clientY;
@@ -50,14 +46,46 @@ export default class ObjectControls {
 
   _onUp = () => {
     this.isDragging = false;
-    const vel = this.velocityX || 0;
-    gsap.to(this.object.rotation, {
-      y: this.object.rotation.y + vel * 0.25,
-      duration: 0.6,
-      ease: "power3.out",
-    });
-    this.velocityX = 0;
   };
+
+  /* ================= ROTATION ================= */
+
+  _rotate(dx, dy) {
+    /** YAW */
+    const qYaw = new THREE.Quaternion().setFromAxisAngle(
+      new THREE.Vector3(0, 1, 0),
+      dx * this.rotationSpeed,
+    );
+    this.object.quaternion.premultiply(qYaw);
+
+    /** PITCH */
+    const right = new THREE.Vector3(1, 0, 0)
+      .applyQuaternion(this.camera.quaternion)
+      .normalize();
+
+    const newPitch = THREE.MathUtils.clamp(
+      this.pitch + dy * this.rotationSpeed,
+      this.minX,
+      this.maxX,
+    );
+
+    const deltaPitch = newPitch - this.pitch;
+    this.pitch = newPitch;
+
+    const qPitch = new THREE.Quaternion().setFromAxisAngle(right, deltaPitch);
+    this.object.quaternion.premultiply(qPitch);
+  }
+
+  _removeRoll() {
+    const euler = new THREE.Euler().setFromQuaternion(
+      this.object.quaternion,
+      "YXZ",
+    );
+
+    euler.z = 0;
+
+    this.object.quaternion.setFromEuler(euler);
+  }
 
   dispose() {
     this.domElement.removeEventListener("pointerdown", this._onDown);

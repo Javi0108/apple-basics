@@ -11,6 +11,7 @@ export default class AppleVisionPro {
     this.controls = new ObjectControls(
       this.AppleVisionPro,
       this.experience.canvas,
+      this.experience.camera.instance,
     );
     this.setObject();
     this.setListeners();
@@ -18,7 +19,7 @@ export default class AppleVisionPro {
 
   setObject() {
     this.AppleVisionPro.position.set(-2, 0, 2);
-    this.AppleVisionPro.scale.set(2.5, 2.5, 2.5);
+    this.AppleVisionPro.scale.set(2.2, 2.2, 2.2);
 
     this.AppleVisionPro.traverse((child) => {
       if (child.isMesh && child.material?.isMeshStandardMaterial) {
