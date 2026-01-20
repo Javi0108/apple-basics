@@ -2,16 +2,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Experience from "./Experience.js";
 
-let isTransitioning = false;
 let transitionProgress = 0;
-const transitionDuration = 2; // segundos
-
-let bezierStart = new THREE.Vector3();
-let bezierP1 = new THREE.Vector3();
-let bezierP2 = new THREE.Vector3();
-let bezierEnd = new THREE.Vector3();
-let startQuat = new THREE.Quaternion();
-let endQuat = new THREE.Quaternion();
 
 export default class Camera {
   constructor() {
@@ -21,7 +12,6 @@ export default class Camera {
     this.scene = this.experience.scene;
     this.canvas = this.experience.canvas;
     this.setInstance();
-    //this.setControls();
   }
 
   setInstance() {
@@ -32,14 +22,7 @@ export default class Camera {
       5,
     );
     this.instance.position.set(0, 0, 2);
-    //this.instance.lookAt(0, 0, 0);
     this.scene.add(this.instance);
-  }
-
-  setControls() {
-    this.controls = new OrbitControls(this.instance, this.canvas);
-    this.controls.enableZoom = true;
-    this.controls.enableRotate = true;
   }
 
   resize() {
@@ -61,7 +44,7 @@ export default class Camera {
     this.lookEndQuat = dummy.quaternion.clone();
 
     if (this.lookStartQuat.angleTo(this.lookEndQuat) < 0.0001) {
-      dummy.rotateY(0.001); // micro-rotación
+      dummy.rotateY(0.001);
       this.lookEndQuat.copy(dummy.quaternion);
     }
 

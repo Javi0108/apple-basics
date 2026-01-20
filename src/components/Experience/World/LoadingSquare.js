@@ -4,10 +4,9 @@ import gsap from "gsap";
 
 export default class LoadingSquare {
   constructor() {
-    this.experience = Experience.instance; // 👈 MUY IMPORTANTE
+    this.experience = Experience.instance;
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
-
     this.setGeometry();
     this.setListeners();
   }

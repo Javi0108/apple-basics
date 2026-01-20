@@ -9,7 +9,7 @@ export default class ObjectControls {
     this.isDragging = false;
     this.prev = { x: 0, y: 0 };
 
-    this.rotationSpeed = 0.002;
+    this.rotationSpeed = 0.005;
     this.minX = -Math.PI / 2;
     this.maxX = Math.PI / 2;
 

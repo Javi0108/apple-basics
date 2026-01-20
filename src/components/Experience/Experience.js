@@ -25,7 +25,6 @@ export default class Experience extends EventEmitter {
     this.sizes = new Sizes();
     this.time = new Time();
     this.scene = new THREE.Scene();
-    //this.scene.add(new THREE.AxesHelper(4));
     this.camera = new Camera();
     this.renderer = new Renderer();
     this.resources = new Resources(sources);

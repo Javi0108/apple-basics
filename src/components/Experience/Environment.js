@@ -1,6 +1,5 @@
 import Experience from "./Experience.js";
 import * as THREE from "three";
-import { RectAreaLightUniformsLib } from "three/addons/lights/RectAreaLightUniformsLib.js";
 
 export default class Environment {
   constructor() {
@@ -16,12 +15,8 @@ export default class Environment {
   setEnvironment() {
     const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
     pmremGenerator.compileEquirectangularShader();
-
     this.envMap = pmremGenerator.fromEquirectangular(this.resources).texture;
-
     this.scene.environment = this.envMap;
-
-    //this.resources.dispose();
     pmremGenerator.dispose();
   }
 }

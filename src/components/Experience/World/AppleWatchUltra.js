@@ -14,9 +14,7 @@ export default class AppleWatchUltra {
       this.experience.canvas,
       this.experience.camera.instance,
     );
-
     this.setObject();
-    this.setListeners();
   }
 
   setObject() {
@@ -31,14 +29,12 @@ export default class AppleWatchUltra {
     carcase.traverse((child) => {
       if (child.isMesh && child.material?.isMeshStandardMaterial) {
         const mat = child.material.clone();
-
         mat.envMap = this.experience.world.environment.envMap;
         mat.envMapIntensity = 0.6;
         mat.metalness = 0.8;
         mat.roughness = 0.25;
         mat.opacity = 1;
         mat.needsUpdate = true;
-
         child.material = mat;
       }
     });
@@ -49,7 +45,6 @@ export default class AppleWatchUltra {
     belt.traverse((child) => {
       if (child.isMesh && child.material?.isMeshStandardMaterial) {
         const mat = child.material.clone();
-
         mat.envMap = this.experience.world.environment.envMap;
         mat.metalness = 0;
         mat.roughness = 0.85;
@@ -97,7 +92,6 @@ export default class AppleWatchUltra {
   }
 
   destroy(onComplete) {
-    console.log("destroying watch");
     this.controls?.dispose();
     const object = this.AppleWatchUltra;
 
@@ -131,8 +125,6 @@ export default class AppleWatchUltra {
       },
     });
   }
-
-  setListeners() {}
 
   update() {}
 }

@@ -14,7 +14,6 @@ export default class AppleVisionPro {
       this.experience.camera.instance,
     );
     this.setObject();
-    this.setListeners();
   }
 
   setObject() {
@@ -66,8 +65,6 @@ export default class AppleVisionPro {
       },
     });
   }
-
-  setListeners() {}
 
   update() {}
 }

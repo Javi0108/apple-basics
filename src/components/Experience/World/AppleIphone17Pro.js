@@ -15,7 +15,6 @@ export default class AppleIphone17Pro {
       this.experience.camera.instance,
     );
     this.setObject();
-    this.setListeners();
   }
 
   setObject() {
@@ -120,8 +119,6 @@ export default class AppleIphone17Pro {
       },
     });
   }
-
-  setListeners() {}
 
   update() {}
 }

@@ -1,24 +1,22 @@
 import Experience from "../Experience.js";
 import * as THREE from "three";
-import gsap from "gsap";
 
-export default class AppleIphone17Pro {
+export default class Dust {
   constructor() {
     this.experience = Experience.instance;
     this.scene = this.experience.scene;
     this.resources = this.experience.resources.items.DustTexture;
     this.setObject();
-    this.setListeners();
   }
 
   setObject() {
-    const numOfPoints = 1000;
+    const numOfPoints = 500;
     const vertices = [];
 
     for (let i = 0; i < numOfPoints; i++) {
-      const x = (Math.random() - 0.5) * 250;
-      const y = (Math.random() - 0.5) * 350;
-      const z = (Math.random() - 0.5) * 350;
+      const x = (Math.random() - 0.5) * 7;
+      const y = (Math.random() - 0.5) * 7;
+      const z = (Math.random() - 0.5) * 10;
       vertices.push(x, y, z);
     }
 
@@ -31,9 +29,9 @@ export default class AppleIphone17Pro {
     const material = new THREE.PointsMaterial({
       alphaMap: this.resources,
       color: new THREE.Color("#525252"),
-      size: 2,
+      size: 0.1,
       sizeAttenuation: true,
-      depthWrite: true,
+      depthWrite: false,
       transparent: true,
       alphaTest: 0.001,
       depthTest: true,
@@ -42,10 +40,6 @@ export default class AppleIphone17Pro {
     this.points = new THREE.Points(geometry, material);
     this.scene.add(this.points);
   }
-
-  setColor(color) {}
-
-  setListeners() {}
 
   update() {}
 }

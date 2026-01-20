@@ -72,9 +72,5 @@ export default class AppleAirPodsPro {
     });
   }
 
-  update() {
-    if (this.mixer) {
-      this.mixer.update(this.experience.time.delta * 0.001);
-    }
-  }
+  update() {}
 }
