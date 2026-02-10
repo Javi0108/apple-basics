@@ -1,5 +1,10 @@
 export default [
   {
+    name: "Environment",
+    type: "environment",
+    path: "/environment/studio_small_08_1k.hdr",
+  },
+  {
     name: "AppleWatchUltra",
     type: "gltfModel",
     path: "/objects/apple_watch_ultra_2.glb",
@@ -18,11 +23,6 @@ export default [
     name: "AppleVisionPro",
     type: "gltfModel",
     path: "/objects/apple_vision_pro.glb",
-  },
-  {
-    name: "Environment",
-    type: "environment",
-    path: "/environment/studio_small_08_1k.hdr",
   },
   {
     name: "PerlinTexture",
