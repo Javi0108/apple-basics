@@ -44,7 +44,7 @@ export default class Dust {
       sizeAttenuation: true,
       depthWrite: false,
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.2,
       alphaTest: 0.001,
       depthTest: true,
     });
