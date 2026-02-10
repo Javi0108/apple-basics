@@ -29,9 +29,19 @@ function Watch({ onColorChange }) {
           onChangeComplete={handleChangeComplete}
         />
         <button className="info-button" onClick={handleInfoClick}>
+          <span className="info-button-text">Info</span>
           <i className="bi bi-info-circle"></i>
         </button>
         <ConversationalAI className="IA-Conversation" />
+        <a
+          href="https://www.apple.com/shop/buy-watch/apple-watch-ultra"
+          className="buy-button"
+          title="Buy it!"
+          target="_blank"
+        >
+          <span className="buy-button-text">Buy it!</span>
+          <i className="bi bi-bag"></i>
+        </a>
       </div>
       {showInfo && (
         <div id="info">

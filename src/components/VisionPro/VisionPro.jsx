@@ -14,6 +14,7 @@ function VisionPro() {
     <div className="vision-pro" id="vision-pro">
       <div className="colors">
         <button className="info-button" onClick={handleInfoClick}>
+          <span className="info-button-text">Info</span>
           <i className="bi bi-info-circle"></i>
         </button>
         <ConversationalAI className="IA-Conversation" />
@@ -22,17 +23,7 @@ function VisionPro() {
         <div id="info">
           <Info
             title="Apple Vision Pro"
-            description="The Apple Watch Ultra 3 is a powerful evolution, solidifying its
-                status as the best overall smartwatch money can buy. The larger,
-                brighter display is a significant upgrade, while the addition of
-                accessible and varied satellite-powered features provides a
-                better safety net than rivals currently offer. Core tracking
-                accuracy for GPS and heart rate remains among the industry's
-                best, and the battery life sees a welcome (if not revolutionary)
-                improvement. While it still lacks the deep training analysis of
-                a dedicated sports watch, it masterfully strikes the balance
-                between an accomplished sports tracker and a seamless
-                smartwatch."
+            description="The Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world. It features an immersive micro-OLED display system with over 23 million pixels, providing stunning clarity and vibrant colors. Powered by the M2 and R1 chips, it delivers lag-free performance for demanding applications and entertainment. The intuitive eye and hand-tracking interface allows you to navigate apps, watch movies, and collaborate with others in a completely new way. With spatial audio and a comfortable, lightweight design, the Vision Pro offers an unparalleled computing experience that redefines what's possible."
             img="/img/vision_image.jpg"
             onClose={() => setShowInfo(false)}
           />

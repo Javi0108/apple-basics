@@ -27,7 +27,7 @@ export default class World extends EventEmitter {
 
     this.resources.on("ready", () => {
       this.environment = new Environment();
-      this.dust = new Dust();
+      //this.dust = new Dust();
       this.loadCurrentObject();
       this.trigger?.("loaded");
     });

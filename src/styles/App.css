@@ -152,13 +152,80 @@
   filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
 }
 
-.info {
-  display: none;
+.buy-button {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem 0.2rem 0.6rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Onest", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0);
+  backdrop-filter: blur(2px) saturate(180%);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: padding 0.3s ease;
+}
+
+.buy-button::after {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.buy-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-button-text {
+  white-space: nowrap;
+
+  opacity: 0;
+  max-width: 0;
+  transform: translateX(10px);
+
+  transition:
+    opacity 0.1s ease,
+    max-width 0.3s ease,
+    transform 0.3s ease;
+}
+
+.buy-button:hover {
+  padding: 0.3rem 0.9rem 0.2rem 0.9rem;
+}
+
+.buy-button:hover .buy-button-text {
+  opacity: 1;
+  margin-right: 0.5rem;
+  max-width: 80px;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {
   .img {
     left: 15dvw;
     width: 10%;
+  }
+
+  .buy-button:hover {
+    padding: 0.3rem 0.6rem 0.2rem 0.6rem;
+  }
+
+  .buy-button:hover .buy-button-text {
+    opacity: 0;
+    margin-right: 0;
+    max-width: 0;
+    transform: translateX(0);
   }
 }

@@ -59,6 +59,7 @@ export default function ConversationalAI() {
   if (isConversationOpen) {
     return (
       <button className="stop-button" onClick={handleClick}>
+        <span className="stop-button-text">Stop</span>
         <i className="bi bi-stop-circle-fill"></i>
       </button>
     );
@@ -67,6 +68,7 @@ export default function ConversationalAI() {
   if (!isConversationOpen) {
     return (
       <button className="IA-Conversation" onClick={handleClick}>
+        <span className="IA-Conversation-text">Talk to Ple!</span>
         <i className="bi bi-openai"></i>
       </button>
     );

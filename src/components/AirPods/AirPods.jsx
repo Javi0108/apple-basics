@@ -17,9 +17,19 @@ function AirPods() {
     <div className="airpods" id="airpods">
       <div className="colors">
         <button className="info-button" onClick={handleInfoClick}>
+          <span className="info-button-text">Info</span>
           <i className="bi bi-info-circle"></i>
         </button>
         <ConversationalAI />
+        <a
+          href="https://www.apple.com/shop/buy-airpods/airpods-pro-3"
+          className="buy-button"
+          title="Buy it!"
+          target="_blank"
+        >
+          <span className="buy-button-text">Buy it!</span>
+          <i className="bi bi-bag"></i>
+        </a>
       </div>
       {showInfo && (
         <div id="info">
