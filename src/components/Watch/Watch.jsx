@@ -28,7 +28,11 @@ function Watch({ onColorChange }) {
           colors={["#1E1C1D", "#dfd5cbff"]}
           onChangeComplete={handleChangeComplete}
         />
-        <button className="info-button" onClick={handleInfoClick}>
+        <button
+          className="info-button"
+          title="Information"
+          onClick={handleInfoClick}
+        >
           <span className="info-button-text">Info</span>
           <i className="bi bi-info-circle"></i>
         </button>
@@ -54,10 +58,7 @@ function Watch({ onColorChange }) {
                 better safety net than rivals currently offer. Core tracking
                 accuracy for GPS and heart rate remains among the industry's
                 best, and the battery life sees a welcome (if not revolutionary)
-                improvement. While it still lacks the deep training analysis of
-                a dedicated sports watch, it masterfully strikes the balance
-                between an accomplished sports tracker and a seamless
-                smartwatch."
+                improvement."
             img="/img/watch_image.jpg"
             onClose={() => setShowInfo(false)}
           />

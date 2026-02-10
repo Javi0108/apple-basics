@@ -16,7 +16,11 @@ function AirPods() {
   return (
     <div className="airpods" id="airpods">
       <div className="colors">
-        <button className="info-button" onClick={handleInfoClick}>
+        <button
+          className="info-button"
+          title="Information"
+          onClick={handleInfoClick}
+        >
           <span className="info-button-text">Info</span>
           <i className="bi bi-info-circle"></i>
         </button>

@@ -67,7 +67,11 @@ export default function ConversationalAI() {
 
   if (!isConversationOpen) {
     return (
-      <button className="IA-Conversation" onClick={handleClick}>
+      <button
+        className="IA-Conversation"
+        title="Talk to Ple! Personal AI assistant"
+        onClick={handleClick}
+      >
         <span className="IA-Conversation-text">Talk to Ple!</span>
         <i className="bi bi-openai"></i>
       </button>
